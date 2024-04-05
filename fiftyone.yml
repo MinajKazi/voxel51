@@ -1,0 +1,6 @@
+name: "hello/hello-world"
+description: An custom example of JS and Python components in a single plugin
+version: 1.0.0
+operators:
+  - count_samples
+  - show_alert
