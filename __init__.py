@@ -7,7 +7,7 @@ class CountSamples(foo.Operator):
     def config(self):
         return foo.OperatorConfig(
             name="count_samples",
-            label="Count samples",
+            label="Minaj",
             dynamic=True,
         )
 
@@ -19,13 +19,13 @@ class CountSamples(foo.Operator):
             choices.add_choice(
                 "DATASET",
                 label="Dataset",
-                description="Count the number of samples in the dataset",
+                description="Count the number of samples in the dataset Minaj",
             )
 
             choices.add_choice(
                 "VIEW",
                 label="Current view",
-                description="Count the number of samples in the current view",
+                description="Count the number of samples in the current view for Minaj",
             )
 
             inputs.enum(
@@ -41,7 +41,7 @@ class CountSamples(foo.Operator):
     def execute(self, ctx):
         target = ctx.params.get("target", "DATASET")
         sample_collection = ctx.view if target == "VIEW" else ctx.dataset
-        return {"count": sample_collection.count()}
+        return {"count for Minaj": sample_collection.count()}
 
     def resolve_output(self, ctx):
         target = ctx.params.get("target", "DATASET")
